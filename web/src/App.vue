@@ -5,17 +5,32 @@
   >
     <el-config-provider :locale="zhCn">
       <router-view />
+      <button @click="changeLanguage('en')">English</button>
+      <button @click="changeLanguage('ru')">Русский</button>
+      <button @click="changeLanguage('zh')">中文</button>
     </el-config-provider>
   </div>
 </template>
 
 <script setup>
-  import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
+import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
+//import ru from 'element-plus/dist/locale/ru.mjs'
   import { useAppStore } from '@/pinia'
+
   useAppStore()
   defineOptions({
     name: 'App'
   })
+
+</script>
+<script>
+export default {
+  methods: {
+    changeLanguage(lang) {
+      this.$i18n.locale = lang; // Смена языка
+    },
+  },
+};
 </script>
 <style lang="scss">
   // 引入初始化样式

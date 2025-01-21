@@ -19,7 +19,7 @@
       <gva-quick-link />
     </gva-card>
     <gva-card
-      title="内容数据"
+      title="{{ $t('content_data') }}"
       custom-class="col-span-1 md:col-span-2 md:row-start-2 lg:col-span-6 col-start-1 row-span-2"
     >
       <gva-chart :type="4" />
@@ -70,7 +70,7 @@
     GvaBanner
   } from './components'
   defineOptions({
-    name: 'Dashboard'
+    name: this.$t('dashboard')
   })
 </script>
 

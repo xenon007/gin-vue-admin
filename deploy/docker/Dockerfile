@@ -12,7 +12,7 @@ RUN set -ex \
     && yum -y install epel-release \
     && yum -y localinstall http://mirrors.ustc.edu.cn/mysql-repo/mysql57-community-release-el7.rpm \
     && yum -y install mysql-community-server git redis nginx go npm --nogpgcheck && chmod +x ./entrypoint.sh \
-    && npm install -g yarn && go env -w GO111MODULE=on && go env -w GOPROXY=https://goproxy.cn,direct \
+    && npm install -g yarn && go env -w GO111MODULE=on  \
     && echo "start" > /dev/null
 EXPOSE 80
 ENTRYPOINT ["./entrypoint.sh"]

@@ -1,0 +1,14 @@
+{
+  "welcome": "Welcome",
+  "message": "Hello, this is a sample message.",
+  "project_slogan": "A management platform using Golang and Vue",
+  "dashboard": "Dashboard",
+  "content_data": "Content Data",
+  "login_description": "Please enter your user name",
+  "password_description": "Please enter password",
+  "captcha_description": "Please enter verification code",
+  "btn_login": "Login",
+  "btn_init": "Initialize DB",
+  "icon_file_description": "file",
+  "icon_tutorial_video_description": "tutorial video"
+}

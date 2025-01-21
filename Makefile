@@ -46,12 +46,11 @@ build-local:
 #本地环境打包前端
 build-web-local:
 	@cd web/ && if [ -d "dist" ];then rm -rf dist; else echo "OK!"; fi \
-	&& yarn config set registry http://mirrors.cloud.tencent.com/npm/ && yarn install && yarn build
+	&& yarn install && yarn build
 
 #本地环境打包后端
 build-server-local:
 	@cd server/ && if [ -f "server" ];then rm -rf server; else echo "OK!"; fi \
-	&& go env -w GO111MODULE=on && go env -w GOPROXY=https://goproxy.cn,direct \
 	&& go env -w CGO_ENABLED=0 && go env  && go mod tidy \
 	&& go build -ldflags "-B 0x$(shell head -c20 /dev/urandom|od -An -tx1|tr -d ' \n') -X main.Version=${TAGS_OPT}" -v
 

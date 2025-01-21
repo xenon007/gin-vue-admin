@@ -20,7 +20,7 @@
                 {{ $GIN_VUE_ADMIN.appName }}
               </p>
               <p class="text-center text-sm font-normal text-gray-500 mt-2.5">
-                A management platform using Golang and Vue
+                {{ $t('project_slogan') }}
               </p>
             </div>
             <el-form
@@ -34,7 +34,7 @@
                 <el-input
                   v-model="loginFormData.username"
                   size="large"
-                  placeholder="请输入用户名"
+                  :placeholder="this.$t('login_description')"
                   suffix-icon="user"
                 />
               </el-form-item>
@@ -44,7 +44,7 @@
                   show-password
                   size="large"
                   type="password"
-                  placeholder="请输入密码"
+                  :placeholder="this.$t('password_description')"
                 />
               </el-form-item>
               <el-form-item
@@ -55,7 +55,7 @@
                 <div class="flex w-full justify-between">
                   <el-input
                     v-model="loginFormData.captcha"
-                    placeholder="请输入验证码"
+                    :placeholder="this.$t('login_description')"
                     size="large"
                     class="flex-1 mr-5"
                   />
@@ -64,7 +64,7 @@
                       v-if="picPath"
                       class="w-full h-full"
                       :src="picPath"
-                      alt="请输入验证码"
+                      :alt="this.$t('login_description')"
                       @click="loginVerify()"
                     />
                   </div>
@@ -76,7 +76,7 @@
                   type="primary"
                   size="large"
                   @click="submitForm"
-                  >登 录</el-button
+                  >{{$t('btn_login')}}</el-button
                 >
               </el-form-item>
               <el-form-item class="mb-6">
@@ -85,7 +85,7 @@
                   type="primary"
                   size="large"
                   @click="checkInit"
-                  >前往初始化</el-button
+                  >{{$t('btn_init')}}</el-button
                 >
               </el-form-item>
             </el-form>
@@ -104,7 +104,7 @@
     <BottomInfo class="left-0 right-0 absolute bottom-3 mx-auto w-full z-20">
       <div class="links items-center justify-center gap-2 hidden md:flex">
         <a href="https://www.gin-vue-admin.com/" target="_blank">
-          <img src="@/assets/docs.png" class="w-8 h-8" alt="文档" />
+          <img src="@/assets/docs.png" class="w-8 h-8" alt="$t('icon_file_description')" />
         </a>
         <a href="https://support.qq.com/product/371961" target="_blank">
           <img src="@/assets/kefu.png" class="w-8 h-8" alt="客服" />
@@ -116,7 +116,7 @@
           <img src="@/assets/github.png" class="w-8 h-8" alt="github" />
         </a>
         <a href="https://space.bilibili.com/322210472" target="_blank">
-          <img src="@/assets/video.png" class="w-8 h-8" alt="视频站" />
+          <img src="@/assets/video.png" class="w-8 h-8" :alt="$t('icon_tutorial_video_description')" />
         </a>
       </div>
     </BottomInfo>

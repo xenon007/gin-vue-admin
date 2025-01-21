@@ -135,14 +135,14 @@ go get -u github.com/swaggo/swag/cmd/swag
 
 ##### (2) In mainland China
 
-In mainland China, access to go.org/x is prohibited，we recommend [goproxy.io](https://goproxy.io/zh/) or [goproxy.cn](https://goproxy.cn)
+In mainland China, access to go.org/x is prohibited，we recommend [GOPROXYCN.io](https://GOPROXYCN.io/zh/) or [goproxy.cn](https://GOPROXYCN.cn)
 
 ````bash
 # If you are using a version of Go 1.13 - 1.15 Need to set up manually GO111MODULE=on, The opening mode is as follows, If your Go version is 1.16 ~ Latest edition You can ignore the following step one
 # Step one、Enable Go Modules Function
 go env -w GO111MODULE=on 
-# Step two、Configuration GOPROXY Environment variable
-go env -w GOPROXY=https://goproxy.cn,https://goproxy.io,direct
+# Step two、Configuration GOPROXYCN Environment variable
+#go env -w GOPROXYCN=https://goproxy.cn,https://goproxy.io,direct
 
 # If you dislike trouble,You can use the go generate Automatically execute code before compilation, But this can't be used command line terminal of `Goland` or `Vscode` 
 cd server
