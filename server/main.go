@@ -1,11 +1,14 @@
 package main
 
 import (
+	"fmt"
 	"github.com/flipped-aurora/gin-vue-admin/server/core"
 	"github.com/flipped-aurora/gin-vue-admin/server/global"
 	"github.com/flipped-aurora/gin-vue-admin/server/initialize"
+	"github.com/xenon007/gin-vue-admin/server/translation"
 	_ "go.uber.org/automaxprocs"
 	"go.uber.org/zap"
+	"log"
 )
 
 //go:generate go env -w GO111MODULE=on
@@ -27,6 +30,17 @@ import (
 // @name                        x-token
 // @BasePath                    /
 func main() {
+	// Инициализация переводов
+	translation, err := translation.NewTranslation("./locales", []string{"en", "ru", "zh"})
+	if err != nil {
+		log.Fatalf("Error initializing translations: %v", err)
+	}
+	// Указание текущего языка
+	currentLang := "ru"
+	
+	fmt.Println(translation.Translate(currentLang, "welcome", nil))
+	fmt.Println(translation.Translate(currentLang, "error_not_found", nil))
+
 	global.GVA_VP = core.Viper() // 初始化Viper
 	initialize.OtherInit()
 	global.GVA_LOG = core.Zap() // 初始化zap日志库

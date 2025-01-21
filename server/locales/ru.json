@@ -1,0 +1,14 @@
+{
+  "welcome": "Welcome",
+  "message": "Hello, this is a sample message.",
+  "project_slogan": "A management platform using Golang and Vue",
+  "dashboard": "Дашборд",
+  "content_data": "Данные контента",
+  "login_description": "Введите имя пользователя",
+  "password_description": "Введите пароль",
+  "captcha_description": "Введите проверочный код",
+  "btn_login": "Войти",
+  "btn_init": "Инициализация БД",
+  "icon_file_description": "дока",
+  "icon_tutorial_video_description": "туториалы"
+}

@@ -1,0 +1,15 @@
+{
+  "welcome": "Welcome",
+  "message": "Hello, this is a sample message.",
+  "project_slogan": "A management platform using Golang and Vue",
+  "dashboard": "Dashboard",
+  "content_data": "内容数据",
+  "login_description": "请输入用户名",
+  "password_description": "请输入密码",
+  "captcha_description": "请输入验证码",
+  "btn_login": "登 录",
+  "btn_init": "前往初始化",
+  "icon_file_description": "文档",
+  "icon_tutorial_video_description": "视频站"
+
+}
